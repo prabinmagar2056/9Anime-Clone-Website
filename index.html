@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9Anime</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- css link -->`
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+    <!-- header start -->
+   <header>
+    <!-- navigation bar start -->
+    <nav id="navigation-container">
+        <!-- toggle-icon -->
+        <span class="toggle-icon">
+            <i class="fa-solid fa-bars" id="toggle-icon-bar"></i>
+        </span>
+        <span class="navigation">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="" id="genere">GENERE</a>
+                    <div class="subLinks-genere-container">
+                        <div class="subLinks-genere">
+                            <ul>
+                                <li><a href="">Action</a></li>
+                                <li><a href="">Demontia</a></li>
+                                <li><a href="">Fantasy</a></li>
+                                <li><a href="">Horror</a></li>
+                                <li><a href="">Magic</a></li>
+                                <li><a href="">Music</a></li>
+                                <li><a href="">Psychological</a></li>
+                                <li><a href="">Shi-Fi</a></li>
+                                <li><a href="">Shounen</a></li>
+                                <li><a href="">Sports</a></li>
+                                <li><a href="">Vampire</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">Adventure</a></li>
+                                <li><a href="">Demon</a></li>
+                                <li><a href="">Game</a></li>
+                                <li><a href="">Isekai</a></li>
+                                <li><a href="">Martial Arts</a></li>
+                                <li><a href="">Mysterious</a></li>
+                                <li><a href="">Romance</a></li>
+                                <li><a href="">Seinen</a></li>
+                                <li><a href="">Shounen Ai</a></li>
+                                <li><a href="">Super Power</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">Cars</a></li>
+                                <li><a href="">Drama</a></li>
+                                <li><a href="">Horem</a></li>
+                                <li><a href="">Josei</a></li>
+                                <li><a href="">Mecha</a></li>
+                                <li><a href="">Parody</a></li>
+                                <li><a href="">Samurai</a></li>
+                                <li><a href="">Shoujo</a></li>
+                                <li><a href="">Slice of Life</a></li>
+                                <li><a href="">SuperNatural</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="">Commedy</a></li>
+                                <li><a href="">Echhi</a></li>
+                                <li><a href="">Historical</a></li>
+                                <li><a href="">Kids</a></li>
+                                <li><a href="">Milatry</a></li>
+                                <li><a href="">Police</a></li>
+                                <li><a href="">School</a></li>
+                                <li><a href="">Soujo Ai</a></li>
+                                <li><a href="">Space</a></li>
+                                <li><a href="">Thriller</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="" id="types">TYPES</a>
+                    <div class="subLinks-types-container">
+                        <div class="subLinks-types">
+                            <ul>
+                                <li><a href="">Movie</a></li>
+                                <li><a href="">TV Series</a></li>
+                                <li><a href="">OVAs</a></li>
+                                <li><a href="">ONAs</a></li>
+                                <li><a href="">Special</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">UPDATE</a></li>
+                <li><a href="">ADDED</a></li>
+                <li><a href="">ONGOING</a></li>
+                <li><a href="">UPCOMING</a></li>
+                <li><a href="">RANDOM</a></li>
+                <li><a href="">9ANIME</a></li>
+            </ul>
+        </span>
+        <!-- web brand logo -->
+        <span class="web-logo">
+            <img src="image/logo.png" alt="" width="180px">
+        </span>
+        <!-- search-bar -->
+        <span class="search-bar">
+            <form action="">
+                <div class="search-bar-box show_hide_seach-bar">
+                    <input type="text" placeholder="Enter anime name" id="search-input"><span class="search-icon"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></span>
+                </div>
+            </form>
+            <i class="fa-solid fa-magnifying-glass" id="toggle-search-icon"></i>
+        </span>
+        <!-- social-icon-links -->
+        <span class="social-icon-links">
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-telegram"></i>
+            <i class="fa-brands fa-square-reddit"></i>
+        </span>
+        <!-- sign-in-icon -->
+        <span class="sign-in">
+            <button type="button" id="sign-btn"><span class="btn-text" id="sign-text">Sign in</span></button>
+            <i class="fa-solid fa-user" id="sign-icon"></i>
+        </span>
+    </nav>
+    <!-- navigation bar end -->
+
+   </header>
+   <!-- header end -->
+
+   <!-- member login container -->
+   <div class="login-container">
+        <div class="form-container">
+            <i class="fa-solid fa-xmark" id="crossbar"></i>
+            <div class="form-row chopper">
+                <img src="image/chopper.png" alt="">
+            </div>
+            <div class="form-row">
+                <h2>Member Login</h2>
+                <p>9anime - a better place to watch anime online for free!</p>
+                <form action="">
+                    <input type="email" placeholder="Your Email" class="form-input">
+                    <input type="password" placeholder="Password" class="form-input">
+                    <span class="check-option-And-forgot-password">
+                        <label for="rememberMe">
+                            <input type="checkbox" name="person" id="rememberMe">&nbsp;
+                            Remember me
+                        </label>
+                        <a href="">Forgot password?</a>
+                    </span>
+                    <input type="submit" value="Login">
+                    <span class="Register">
+                        <p>Don't have an account?</p>
+                        <a href="">Register</a>
+                    </span>
+                </form>
+            </div>
+        </div>
+   </div>
+
+
+   <!-- main start -->
+   <main>
+    <section>
+        <!-- images slider  -->
+        <div class="slider-container">
+            <div class="controller-arrow">
+                <i class="fa-solid fa-chevron-left arrow" onclick="prevSlide()"></i>
+                <i class="fa-solid fa-chevron-right arrow" onclick="nextSlide()"></i>
+            </div>
+            <div class="dots">
+                <div class="dot" onclick="showSlide(0)"></div>
+                <div class="dot" onclick="showSlide(1)"></div>
+                <div class="dot" onclick="showSlide(2)"></div>
+                <div class="dot" onclick="showSlide(3)"></div>
+                <div class="dot" onclick="showSlide(4)"></div>
+                <div class="dot" onclick="showSlide(5)"></div>
+                <div class="dot" onclick="showSlide(6)"></div>
+                <div class="dot" onclick="showSlide(7)"></div>
+                <div class="dot" onclick="showSlide(8)"></div>
+                <div class="dot" onclick="showSlide(9)"></div>
+                <div class="dot" onclick="showSlide(10)"></div>
+                <div class="dot" onclick="showSlide(11)"></div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/29f5061c166f8e5cc07ccf80c15bd007.jpeg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/31aacbf403a8f1c180a940009dbf17f5.jpeg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/37407c346d4da96dfdce7330709f4801.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/50affe2ea9a02c36d5a7c0532c1b7ef9.jpeg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/29f5061c166f8e5cc07ccf80c15bd007.jpeg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/962ffd97d28067a8b105145651cea9b2.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/98cbc9f7587ef0814ff43dfffc45069f.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/9d97abb689f6bfc0272959bba24b2813.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/b15a6b66cd49e0933ff445d7191c9f85.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/b8d042341270be390c9547c462eb8436.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/37407c346d4da96dfdce7330709f4801.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+            <div class="slider">
+                <img src="image/slider-images/db753c5dbfe30364df55577f6f564ced.jpg" alt="" class="img">
+                <div class="caption">
+                    <div class="description-title">
+                        <h2>Bucchigirl?!</h2>
+                        <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his formar friend Mataka Asamine. Meanwhile, the shadow of demon appears...?!</p>
+                    </div>
+                    <button type="button" class="watch-now">Watch now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!-- quick filter -->
+        <div class="quick-filter-section">
+            <h2>Quick filter</h2>
+            <div class="inner-filter-box">
+                <div class="filter-option">
+                    <span class="option">Genere<span class="all">All</span> <i class="fa-solid fa-angle-down"></i></span>
+                    <span class="option">Country<span class="all">All</span> <i class="fa-solid fa-angle-down"></i></span>
+                    <span class="option">Season<span class="all">All</span> <i class="fa-solid fa-angle-down"></i></span>
+                    <span class="option">Year<span class="all">All</span> <i class="fa-solid fa-angle-down"></i></span>
+                    <span class="option">Type<span class="all">All</span> <i class="fa-solid fa-angle-down"></i></span>
+                    <span class="option">Status<span class="all">All</span> <i class="fa-solid fa-angle-down"></i></span>
+                    <span class="option">Language<span class="all">All</span> <i class="fa-solid fa-angle-down"></i></span>
+                    <span class="option">Start<span class="all">Default</span> <i class="fa-solid fa-angle-down"></i></span>
+                </div>
+                <input type="text" placeholder="Search..." autocomplete="off">
+            </div>
+            <button type="button" class="filter-btn"><i class="fa-solid fa-filter"></i> Filter</button>
+        </div>
+    </section>
+   </main>
+
+
+    <script src="scirpt.js"></script>
+</body>
+</html>

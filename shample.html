@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+    /* Add your styles here */
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .controller-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .controller-arrow.left {
+        left: 0;
+    }
+    .controller-arrow.right {
+        right: 0;
+    }
+    .dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        z-index: 1;
+    }
+    .dot {
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .dot.active {
+        background-color: white;
+    }
+    .slider {
+        display: none;
+        position: relative;
+        text-align: center;
+    }
+    .slider img {
+        max-width: 100%;
+    }
+    .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        padding: 0 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+    .caption h2, .caption p {
+        margin: 0;
+    }
+    .watch-now {
+        padding: 5px 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="slider-container">
+    <div class="controller-arrow left" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></div>
+    <div class="controller-arrow right" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></div>
+    <div class="dots">
+        <div class="dot" onclick="showSlide(0)"></div>
+        <div class="dot" onclick="showSlide(1)"></div>
+        <div class="dot" onclick="showSlide(2)"></div>
+        <div class="dot" onclick="showSlide(3)"></div>
+        <div class="dot" onclick="showSlide(4)"></div>
+    </div>
+    <div class="slider">
+        <img src="image/slider-images/29f5061c166f8e5cc07ccf80c15bd007.jpeg" alt="" class="img">
+        <div class="caption">
+            <div class="description-title">
+                <h2>Bucchigirl?!</h2>
+                <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his former friend Mataka Asamine. Meanwhile, the shadow of a demon appears...?!</p>
+            </div>
+            <button type="button" class="watch-now">Watch now</button>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="image/slider-images/31aacbf403a8f1c180a940009dbf17f5.jpeg" alt="" class="img">
+        <div class="caption">
+            <div class="description-title">
+                <h2>Bucchigirl?!</h2>
+                <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his former friend Mataka Asamine. Meanwhile, the shadow of a demon appears...?!</p>
+            </div>
+            <button type="button" class="watch-now">Watch now</button>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="image/slider-images/37407c346d4da96dfdce7330709f4801.jpg" alt="" class="img">
+        <div class="caption">
+            <div class="description-title">
+                <h2>Bucchigirl?!</h2>
+                <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his former friend Mataka Asamine. Meanwhile, the shadow of a demon appears...?!</p>
+            </div>
+            <button type="button" class="watch-now">Watch now</button>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="image/slider-images/50affe2ea9a02c36d5a7c0532c1b7ef9.jpeg" alt="" class="img">
+        <div class="caption">
+            <div class="description-title">
+                <h2>Bucchigirl?!</h2>
+                <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his former friend Mataka Asamine. Meanwhile, the shadow of a demon appears...?!</p>
+            </div>
+            <button type="button" class="watch-now">Watch now</button>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="image/slider-images/31aacbf403a8f1c180a940009dbf17f5.jpeg" alt="" class="img">
+        <div class="caption">
+            <div class="description-title">
+                <h2>Bucchigirl?!</h2>
+                <p>Araji Tomobishi gets caught up in battles among powerful individuals after reuniting with his former friend Mataka Asamine. Meanwhile, the shadow of a demon appears...?!</p>
+            </div>
+            <button type="button" class="watch-now">Watch now</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const sliders = document.querySelectorAll('.slider');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        currentIndex = index;
+        sliders.forEach((slider, i) => {
+            if (i === index) {
+                slider.style.display = 'block';
+            } else {
+                slider.style.display = 'none';
+            }
+        });
+
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= sliders.length) {
+            currentIndex = 0;
+        }
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = sliders.length - 1;
+        }
+        showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+</script>
+</body>
+</html>
