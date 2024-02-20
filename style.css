@@ -73,7 +73,7 @@ header {
             color: var(--text-color);
             padding: 0.5rem 1rem;
             font-weight: 500;
-            font-size: 15px;
+            font-size: 14px;
         }
         & .navigation ul li a:hover {
             background-color: #00000035;
@@ -473,16 +473,15 @@ header {
 
 main {
     display: flex;
-    margin-top: 1rem;
+    gap: 1rem;
+    margin: 1rem;
 
     & section {
-
-      /* image slider */
+        width: 100%;
       & .slider-container {
         display: flex;
         position: relative;
         overflow: hidden;
-        margin: 1rem;
         border-radius: 6px;
 
         & .controller-arrow {
@@ -585,10 +584,8 @@ main {
       & .quick-filter-section {
         display: flex;
         flex-direction: column;
-        width: 360px;
+        width: 100%;
         background-color: #1f1f1f;
-        margin-top: 15px;
-        margin-right: 15px;
         padding: 0.8rem;
         border-radius: 8px;
         gap: 0.5rem;
@@ -599,28 +596,42 @@ main {
       }
     
       & .inner-filter-box {
-        display: flex;
-        flex-direction: column;
+        display: grid;
         gap: 0.8rem;
 
         & .filter-option {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto auto auto;
             gap: 0.5rem;
 
             & .option {
                 background-color: #292929;
                 text-align: center;
-                padding: 0.2rem 0;
-                font-size: 14px;
+                padding: 0.3rem 0;
+                font-size: 13px;
                 color: var(--shade-text-color);
                 cursor: pointer;
                 transition: 0.3s ease;
+                display: grid;
+                grid-auto-flow: column;
+                place-content: center;
+                min-width: 100px;
+
+                & i {
+                    translate: 50% 20%;
+                }
             }
             & .option:hover {
                 background-color: #2c2c2c;
             }
         }
+      }
+    & .filter-controller {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
         & input[type="text"] {
             background-color: transparent;
             border: 1px solid #5151517a;
@@ -635,23 +646,43 @@ main {
         & ::placeholder {
             color: #ffffffa2;
         }
-      }
-      & .filter-btn {
-        padding: 0.6rem;
-        background-color: var(--secondary-color);
-        border: 0;
-        border-radius: 6px;
-        color: var(--text-color);
-        font-size: 1.1rem;
-        cursor: pointer;
-      }
+        & .filter-btn {
+            padding: 0.6rem;
+            background-color: var(--secondary-color);
+            border: 0;
+            border-radius: 6px;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+    }
     }
 }
 }
 
 @media only screen and (width < 1280px) {
-    .quick-filter-section {
-        width: 100% !important;
+    .filter-option {
+        grid-template-columns: auto auto auto auto !important;
+        grid-template-rows: auto auto !important;
+    }
+    .inner-filter-box {
+        grid-auto-flow: column;
+    }
+    .filter-btn {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (width < 990px) {
+    .inner-filter-box {
+        grid-auto-flow: row;
+    }
+}
+
+@media only screen and (width < 648px) {
+    .filter-option {
+        grid-template-columns: auto auto !important;
+        grid-template-rows: auto auto auto auto !important;
     }
 }
 
